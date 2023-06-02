@@ -1,8 +1,11 @@
 # swarm-setup-ansible
 Ansible Playbook to install and configure Docker Swarm
 
-make sure to change network interface to proper one on /roles/swarm/tasks/main.yml
+Changes with each Deployment:
 
+- network interface in /roles/swarm/tasks/main.yml
+- roles/docker/main.yml "Add user to docker group"
+- 
 To run playbook
 ```
 ansible-playbook -i inventory/hosts.yml -u user -K install-swarm.yml
